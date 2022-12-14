@@ -1,0 +1,10 @@
+body {
+  background-color: #333;
+  color: #ccc;
+  padding: 0 1rem;
+  font-family: sans-serif;
+}
+
+a {
+  color: rgb(225, 225, 157);
+}
