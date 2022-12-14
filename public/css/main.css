@@ -5,5 +5,19 @@ body {
   font-family: sans-serif;
 }
 body a {
-  color: rgb(225, 225, 157);
+  color: rgb(213, 179, 66);
+}
+body nav {
+  background-color: #222;
+  display: flex;
+  gap: 1rem;
+  padding: 0.7rem;
+  border-radius: 0.4rem;
+}
+body nav a {
+  color: #ccc;
+  text-decoration: none;
+}
+body nav a.active {
+  color: rgb(228, 228, 109);
 }/*# sourceMappingURL=main.css.map */
