@@ -20,4 +20,34 @@ body nav a {
 }
 body nav a.active {
   color: rgb(228, 228, 109);
+}
+body .books {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+body .books img {
+  width: 8rem;
+  height: 11rem;
+  box-shadow: 2px 2px 5px #666;
+}
+body .singleBook {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+body .singleBook img {
+  width: 11rem;
+  box-shadow: 2px 2px 5px #666;
+}
+body .singleBook .info .title {
+  font-size: 1.8rem;
+  color: rgb(228, 222, 203);
+  margin-bottom: 0.5rem;
+}
+body .singleBook .info .description {
+  font-size: 1.4rem;
+  color: #888;
+  font-style: italic;
+  width: 30rem;
 }/*# sourceMappingURL=main.css.map */

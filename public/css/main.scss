@@ -23,4 +23,42 @@ body {
       color: rgb(228, 228, 109);
     }
   }
+
+  .books {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    img {
+      width: 8rem;
+      height: 11rem;
+      box-shadow: 2px 2px 5px #666;
+    }
+  }
+
+  .singleBook {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+
+    img {
+      width: 11rem;
+      box-shadow: 2px 2px 5px #666;
+    }
+
+    .info {
+      .title {
+        font-size: 1.8rem;
+        color: rgb(228, 222, 203);
+        margin-bottom: 0.5rem;
+      }
+
+      .description {
+        font-size: 1.4rem;
+        color: #888;
+        font-style: italic;
+        width: 30rem;
+      }
+    }
+  }
 }

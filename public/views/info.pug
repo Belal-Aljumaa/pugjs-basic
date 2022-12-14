@@ -10,10 +10,22 @@
 <body>
   <h1>#{siteData.appTitle}</h1>
   include _nav
-  <p>These are our current books:</p>
-  <div class="books">
-    each book in siteData.books
-      <img src="https://edwardtanguay.vercel.app/share/images/techBooks/#{book.idCode}.jpg"/>
-  </div>
+  if idCode === null
+    <p>These are our current books:</p>
+    <div class="books">
+      each book in siteData.books
+        <a href="/info/#{book.idCode}">
+          <img src="https://edwardtanguay.vercel.app/share/images/techBooks/#{book.idCode}.jpg" />
+        </a>
+    </div>
+  if idCode !== null
+    <div class="singleBook">
+      <img src="https://edwardtanguay.vercel.app/share/images/techBooks/#{book.idCode}.jpg" />
+      <div class="info">
+        <div class="title">#{book.title}</div>
+        <div class="description">#{book.description}</div>
+      </div>
+    </div>
+
 </body>
 </html>

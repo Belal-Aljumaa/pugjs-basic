@@ -1,6 +1,8 @@
 import express from 'express';
 import path from 'path';
 import fetch from 'node-fetch';
+import dotenv from 'dotenv';
+dotenv.config();
 
 
 const app = express();
@@ -11,8 +13,8 @@ app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, './public/views'));
 
-const url = 'https://edwardtanguay.vercel.app/share/techBooks.json';
-const books = await (await fetch(url)).json();
+const url = process.env.API_URL;
+const books:any = await (await fetch(url)).json();
 
 const siteData = {
   appTitle: 'Tech Book Club',
@@ -34,8 +36,14 @@ app.get('/', (req: express.Request, res: express.Response) => {
 });
 
 app.get('/info', (req: express.Request, res: express.Response) => {
-  res.render('info', { siteData, currentPath: '/info' });
+  res.render('info', { siteData, currentPath: '/info', idCode: null });
 });
+
+app.get('/info/:idCode', (req: express.Request, res: express.Response) => {
+  const idCode = req.params.idCode;
+  res.render('info', { siteData, currentPath: '/info', idCode, book: books.find((m: any) => m.idCode === idCode) })
+});
+
 app.listen(port, () => {
   console.log(`listening on http://localhost:${port}`);
 });
