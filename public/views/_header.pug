@@ -1,6 +1,13 @@
 doctype html
 html(lang="en")
   head
+  if idCode !== null
+    meta(property="og:image" content="https://edwardtanguay.vercel.app/share/images/techBooks/#{book.idCode}.jpg")
+    meta(property="og:url" content="https://pugjs-basic.onrender.com/#{book.idCode}")
+    meta(name="twitter:card" content="summary_large_image")
+    meta(property="og:title" content="#{book.title}")
+    meta(property="og:type" content=book)
+    meta(property="og:description" content="#{book.description}")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
