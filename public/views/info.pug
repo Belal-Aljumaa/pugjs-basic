@@ -10,6 +10,10 @@
 <body>
   <h1>#{siteData.appTitle}</h1>
   include _nav
-  <p>go back<a href="/"> home</a></p>
+  <p>These are our current books:</p>
+  <div class="books">
+    each book in siteData.books
+      <img src="https://edwardtanguay.vercel.app/share/images/techBooks/#{book.idCode}.jpg"/>
+  </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <nav>
   each page in siteData.pages
     if page.path===currentPath
-      a(href="#{page.path}" class="active") #{page.title}
+      a(href=page.path class="active") #{page.title}
     else
-      a(href="#{page.path}") #{page.title}
+      a(href=page.path) #{page.title}
 </nav>
